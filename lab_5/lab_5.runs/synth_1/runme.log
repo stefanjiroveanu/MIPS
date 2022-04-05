@@ -1,0 +1,666 @@
+
+*** Running vivado
+    with args -log test_env.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_env.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source test_env.tcl -notrace
+Command: synth_design -top test_env -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 49824 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 285.637 ; gain = 75.648
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'test_env' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:45]
+WARNING: [Synth 8-614] signal 'instruction' is read in the process but is not in the sensitivity list [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:160]
+WARNING: [Synth 8-614] signal 'pc4' is read in the process but is not in the sensitivity list [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:160]
+WARNING: [Synth 8-614] signal 'RD1' is read in the process but is not in the sensitivity list [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:160]
+WARNING: [Synth 8-614] signal 'RD2' is read in the process but is not in the sensitivity list [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:160]
+WARNING: [Synth 8-614] signal 'ext_imm' is read in the process but is not in the sensitivity list [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:160]
+WARNING: [Synth 8-614] signal 'alu_res_in' is read in the process but is not in the sensitivity list [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:160]
+WARNING: [Synth 8-614] signal 'mem_data' is read in the process but is not in the sensitivity list [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:160]
+WARNING: [Synth 8-614] signal 'wd' is read in the process but is not in the sensitivity list [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:160]
+INFO: [Synth 8-3491] module 'MPG' declared at 'D:/proiect vivado/lab_2/lab_2.srcs/sources_1/new/MPG.vhd:36' bound to instance 'c1' of component 'MPG' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:173]
+INFO: [Synth 8-638] synthesizing module 'MPG' [D:/proiect vivado/lab_2/lab_2.srcs/sources_1/new/MPG.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'MPG' (1#1) [D:/proiect vivado/lab_2/lab_2.srcs/sources_1/new/MPG.vhd:42]
+INFO: [Synth 8-3491] module 'MPG' declared at 'D:/proiect vivado/lab_2/lab_2.srcs/sources_1/new/MPG.vhd:36' bound to instance 'c4' of component 'MPG' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:174]
+INFO: [Synth 8-3491] module 'SSDComponent' declared at 'D:/proiect vivado/lab_2/lab_2.srcs/sources_1/new/SSDComponent.vhd:36' bound to instance 'c2' of component 'SSDComponent' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:175]
+INFO: [Synth 8-638] synthesizing module 'SSDComponent' [D:/proiect vivado/lab_2/lab_2.srcs/sources_1/new/SSDComponent.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'SSDComponent' (2#1) [D:/proiect vivado/lab_2/lab_2.srcs/sources_1/new/SSDComponent.vhd:43]
+INFO: [Synth 8-3491] module 'if_env' declared at 'D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/env.vhd:36' bound to instance 'c3' of component 'if_env' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:176]
+INFO: [Synth 8-638] synthesizing module 'if_env' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/env.vhd:48]
+WARNING: [Synth 8-614] signal 'PCPlus1' is read in the process but is not in the sensitivity list [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/env.vhd:86]
+WARNING: [Synth 8-614] signal 'BranchMUXOut' is read in the process but is not in the sensitivity list [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/env.vhd:94]
+INFO: [Synth 8-256] done synthesizing module 'if_env' (3#1) [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/env.vhd:48]
+INFO: [Synth 8-3491] module 'ID' declared at 'D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/ID.vhd:34' bound to instance 'c5' of component 'ID' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:186]
+INFO: [Synth 8-638] synthesizing module 'ID' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/ID.vhd:48]
+INFO: [Synth 8-3491] module 'reg_file' declared at 'D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/reg_file.vhd:6' bound to instance 'RF' of component 'reg_file' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/ID.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'reg_file' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/reg_file.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'reg_file' (4#1) [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/reg_file.vhd:19]
+WARNING: [Synth 8-614] signal 'instr' is read in the process but is not in the sensitivity list [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/ID.vhd:76]
+INFO: [Synth 8-226] default block is never used [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/ID.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'ID' (5#1) [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/ID.vhd:48]
+INFO: [Synth 8-3491] module 'ex_unity' declared at 'D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/ex_unity.vhd:35' bound to instance 'c6' of component 'ex_unity' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:200]
+INFO: [Synth 8-638] synthesizing module 'ex_unity' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/ex_unity.vhd:50]
+WARNING: [Synth 8-614] signal 'rd2' is read in the process but is not in the sensitivity list [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/ex_unity.vhd:56]
+WARNING: [Synth 8-614] signal 'ext_imm' is read in the process but is not in the sensitivity list [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/ex_unity.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'ex_unity' (6#1) [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/ex_unity.vhd:50]
+INFO: [Synth 8-3491] module 'Control_Unit' declared at 'D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/Control_Unit.vhd:34' bound to instance 'c7' of component 'Control_Unit' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:214]
+INFO: [Synth 8-638] synthesizing module 'Control_Unit' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/Control_Unit.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'Control_Unit' (7#1) [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/Control_Unit.vhd:47]
+INFO: [Synth 8-3491] module 'MEM' declared at 'D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/MEM.vhd:36' bound to instance 'c8' of component 'MEM' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+INFO: [Synth 8-638] synthesizing module 'MEM' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/MEM.vhd:45]
+WARNING: [Synth 8-614] signal 'alu_res' is read in the process but is not in the sensitivity list [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/MEM.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'MEM' (8#1) [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/MEM.vhd:45]
+WARNING: [Synth 8-3848] Net alu_res_in in module/entity test_env does not have driver. [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:76]
+INFO: [Synth 8-256] done synthesizing module 'test_env' (9#1) [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:45]
+WARNING: [Synth 8-3331] design ex_unity has unconnected port sa
+WARNING: [Synth 8-3331] design ID has unconnected port instr[15]
+WARNING: [Synth 8-3331] design ID has unconnected port instr[14]
+WARNING: [Synth 8-3331] design ID has unconnected port instr[13]
+WARNING: [Synth 8-3331] design if_env has unconnected port jmp
+WARNING: [Synth 8-3331] design if_env has unconnected port en
+WARNING: [Synth 8-3331] design test_env has unconnected port led[4]
+WARNING: [Synth 8-3331] design test_env has unconnected port led[3]
+WARNING: [Synth 8-3331] design test_env has unconnected port led[2]
+WARNING: [Synth 8-3331] design test_env has unconnected port led[1]
+WARNING: [Synth 8-3331] design test_env has unconnected port led[0]
+WARNING: [Synth 8-3331] design test_env has unconnected port btn[4]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[15]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[14]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[13]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[12]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[11]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[10]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[9]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[8]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[4]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[3]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[2]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[1]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 323.230 ; gain = 113.242
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[15] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[14] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[13] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[12] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[11] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[10] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[9] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[8] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[7] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[6] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[5] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[4] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[3] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[2] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[1] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+WARNING: [Synth 8-3295] tying undriven pin c8:alu_res[0] to constant 0 [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:227]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 323.230 ; gain = 113.242
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:9]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports CLK100MHZ]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:9]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp6'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:209]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:209]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp6'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:210]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:210]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp14'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:212]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:212]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp14'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:213]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:213]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp7'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:215]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:215]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp7'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:216]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:216]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp15'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:218]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:218]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp15'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:219]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:219]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn6'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:221]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:221]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn6'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:222]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:222]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn14'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:224]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:224]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn14'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:225]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:225]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn7'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:227]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:227]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn7'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:228]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:228]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn15'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:230]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:230]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn15'. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:231]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc:231]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/facultate_an2/SEM2/AC/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/test_env_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/test_env_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 614.527 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 614.527 ; gain = 404.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 614.527 ; gain = 404.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 614.527 ; gain = 404.539
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "rom_memory" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/ex_unity.vhd:78]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 614.527 ; gain = 404.539
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   3 Input     16 Bit       Adders := 1     
++---XORs : 
+	   2 Input     16 Bit         XORs := 1     
++---Registers : 
+	                1 Bit    Registers := 6     
++---Muxes : 
+	 257 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 5     
+	   8 Input     16 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module test_env 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module MPG 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module SSDComponent 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+Module if_env 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Muxes : 
+	 257 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+Module ID 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+Module ex_unity 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
++---XORs : 
+	   2 Input     16 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   8 Input     16 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+Module Control_Unit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      3 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design test_env has unconnected port led[4]
+WARNING: [Synth 8-3331] design test_env has unconnected port led[3]
+WARNING: [Synth 8-3331] design test_env has unconnected port led[2]
+WARNING: [Synth 8-3331] design test_env has unconnected port led[1]
+WARNING: [Synth 8-3331] design test_env has unconnected port led[0]
+WARNING: [Synth 8-3331] design test_env has unconnected port btn[4]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[15]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[14]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[13]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[12]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[11]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[10]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[9]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[8]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[4]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[3]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[2]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[1]
+WARNING: [Synth 8-3331] design test_env has unconnected port sw[0]
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[16]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[17]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[18]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[19]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[20]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[21]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[22]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[23]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[24]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[25]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[26]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[27]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[28]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[29]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[30]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/count_reg[31]) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/q1_reg) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/q2_reg) is unused and will be removed from module test_env.
+WARNING: [Synth 8-3332] Sequential element (c1/q3_reg) is unused and will be removed from module test_env.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 614.527 ; gain = 404.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+--------------------+-----------+----------------------+------------------+
+|Module Name | RTL Object         | Inference | Size (Depth x Width) | Primitives       | 
++------------+--------------------+-----------+----------------------+------------------+
+|test_env    | c8/ram_reg         | Implied   | 128 x 16             | RAM128X1S x 16   | 
+|test_env    | c5/RF/reg_file_reg | Implied   | 8 x 16               | RAM32M x 6       | 
++------------+--------------------+-----------+----------------------+------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 614.527 ; gain = 404.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 614.527 ; gain = 404.539
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 614.527 ; gain = 404.539
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 614.527 ; gain = 404.539
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net btn_IBUF[2] with 1st driver pin 'btn_IBUF[2]_inst/O' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:36]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net btn_IBUF[2] with 2nd driver pin 'i_258/O' [D:/proiect vivado/lab_5/lab_5.srcs/sources_1/new/test_environmental.vhd:36]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        1|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 614.527 ; gain = 404.539
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 614.527 ; gain = 404.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 614.527 ; gain = 404.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 614.527 ; gain = 404.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 614.527 ; gain = 404.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |    20|
+|3     |LUT1      |    49|
+|4     |LUT2      |     7|
+|5     |LUT3      |    22|
+|6     |LUT4      |    36|
+|7     |LUT5      |    71|
+|8     |LUT6      |    92|
+|9     |MUXF7     |    16|
+|10    |RAM128X1S |    16|
+|11    |RAM32M    |     6|
+|12    |FDRE      |    59|
+|13    |IBUF      |     6|
+|14    |OBUF      |    22|
+|15    |OBUFT     |     5|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------+-------------+------+
+|      |Instance |Module       |Cells |
++------+---------+-------------+------+
+|1     |top      |             |   428|
+|2     |  c1     |MPG          |    40|
+|3     |  c2     |SSDComponent |    40|
+|4     |  c3     |if_env       |   207|
+|5     |  c4     |MPG_0        |     4|
+|6     |  c5     |ID           |    83|
+|7     |    RF   |reg_file     |    83|
+|8     |  c6     |ex_unity     |     4|
+|9     |  c8     |MEM          |    16|
++------+---------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 614.527 ; gain = 404.539
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 2 critical warnings and 38 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 614.527 ; gain = 112.242
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 614.527 ; gain = 404.539
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 22 instances were transformed.
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E, RAMS64E): 16 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+51 Infos, 161 Warnings, 69 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 614.527 ; gain = 404.539
+INFO: [Common 17-1381] The checkpoint 'D:/proiect vivado/lab_5/lab_5.runs/synth_1/test_env.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 614.527 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 05 17:57:13 2022...
