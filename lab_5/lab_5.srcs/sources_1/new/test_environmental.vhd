@@ -43,14 +43,12 @@ entity test_env is
 end test_env;
 
 architecture Structural of test_env is
-type ROM is array(0 to 255) of std_logic_vector(15 downto 0);
-signal rom_memory : ROM := ( x"0001", x"0010", x"0011", x"0100", x"0101", x"0110", x"0111", x"1000", others=>x"0000"); 
 signal enable : std_logic;
 signal counter: std_logic_vector(15 downto 0) := x"0000";
 
 signal semnal : std_logic_vector(15 downto 0);
 
-signal RD1 : std_logic_vector(15 downto 0) := x"0001";
+signal RD1 : std_logic_vector(15 downto 0) := x"0000";
 signal RD2 : std_logic_vector(15 downto 0) := x"0000";
 signal reset : std_logic;
 signal instruction : std_logic_vector(15 downto 0);
@@ -109,6 +107,7 @@ end component;
 
 component ID is
     Port ( clk : in STD_LOGIC;
+           en : in std_logic;
            instr : in STD_LOGIC_VECTOR (15 downto 0);
            wd : in STD_LOGIC_VECTOR (15 downto 0);
            regdst : in STD_LOGIC;
@@ -154,7 +153,6 @@ component MEM is
            mem_write : in STD_LOGIC;
            alu_res : in STD_LOGIC_VECTOR (15 downto 0);
            write_data : in STD_LOGIC_VECTOR (15 downto 0);
-           alu_res_out : out STD_LOGIC_VECTOR (15 downto 0);
            mem_data : out STD_LOGIC_VECTOR (15 downto 0));
 end component;
 
@@ -167,15 +165,15 @@ begin
         when "010" => semnal <= RD1;
         when "011" => semnal <= RD2;
         when "100" => semnal <= ext_imm;
-        when "101" => semnal <= alu_res_in;
+        when "101" => semnal <= alures;
         when "110" => semnal <= mem_data;
         when "111" => semnal <= wd;
     end case;
 end process;
     c1: MPG port map(clk=>clk, btn=>btn(0), enable=>enable);
-    c4: MPG port map(clk=>clk, btn=>btn(1), enable=>reset);
-    c2: SSDComponent port map(Digit=>semnal, clk=>clk, cat=>cat, an=>an); 
-    c3: if_env port map(
+    c2: MPG port map(clk=>clk, btn=>btn(1), enable=>reset);
+    c3: SSDComponent port map(Digit=>semnal, clk=>clk, cat=>cat, an=>an); 
+    c4: if_env port map(
         jmp_address => jmp_address,
         b_address => branch_address,
         jmp => jmp,
@@ -187,10 +185,11 @@ end process;
         clk=>clk);
     c5: id port map( 
         clk => clk,
+        en => enable,
         instr => instruction,
         wd => wd,
         regdst => regdst,
-        regwrite => rw,
+        regwrite => regwrite,
         RD1 => rd1,
         RD2 => rd2,
         ext_imm => ext_imm,
@@ -229,19 +228,15 @@ end process;
     c8 : MEM port map(
         clk => clk,
         mem_write => mem_write,
-        alu_res => alu_res_in,
+        alu_res => alures,
         write_data => rd2,
-        mem_data => mem_data,
-        alu_res_out => alures
+        mem_data => mem_data
     );
     rw <= regwrite and btn(1);
     wd <= alures when mem_to_reg = '0' else mem_data;
     pcsrc <= branch and zero;
     jmp_address <= "000" & instruction(12 downto 0);
  
-    reset <= btn(2);
-    enable <= btn(3);
-
 led(15) <= regdst;
 led(14) <= ext_op;
 led(13) <= alu_src;

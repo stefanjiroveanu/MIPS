@@ -65,11 +65,11 @@ begin
     begin
         case(alu_op) is
             when "000" => alu_ctr <= func;  -- R-Type
-            when "001" => alu_ctr <= "000"; -- ADDI does addition
-            when "100" => alu_ctr <= "001"; -- BEQ does subtraction
+            when "001" => alu_ctr <= "000"; -- ADDI
+            when "100" => alu_ctr <= "001"; -- BEQ
             when "101" => alu_ctr <= "100"; -- ANDI
             when "110" => alu_ctr <= "101"; -- ORI
-            when others => alu_ctr <= "XXX";
+            when others => alu_ctr <= "000";
         end case;
     end process;
     

@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -49,6 +51,15 @@ architecture Behavioral of Control_Unit is
 begin
 process(instr)
     begin
+        reg_dst <= '0';
+        ext_op <= '0';
+        alu_src <= '0';
+        branch <= '0';
+        jump <= '0';
+        alu_op <= "000";
+        mem_write <= '0';
+        mem_to_reg <= '0';
+        reg_write <= '0';
     case instr is
         when "000" => reg_dst <= '1';
                       ext_op <= '0';
@@ -80,28 +91,28 @@ process(instr)
                       mem_to_reg <= '1';
                       reg_write <= '1';
         when "011" => --sw
-                       reg_dst <= 'X';
+                       reg_dst <= '0';
                        ext_op <= '1';
                        alu_src <= '1';
                        branch <= '0';
                        jump <= '0';
                        alu_op <= "001";
                        mem_write <= '1';
-                       mem_to_reg <= 'X';
+                       mem_to_reg <= '0';
                        reg_write <= '0';        
        when "100" => --BEQ
-                       reg_dst <= 'X';
+                       reg_dst <= '0';
                        ext_op <= '1';
                        alu_src <= '0';
                        branch <= '1';
                        jump <= '0';
                        alu_op <= "100";
                        mem_write <= '0';
-                       mem_to_reg <= 'X';
+                       mem_to_reg <= '0';
                        reg_write <= '0';
        when "101" => --ANDI
                        reg_dst <= '0';
-                       ext_op <= '1';
+                       ext_op <= '0';
                        alu_src <= '1';
                        branch <= '0';
                        jump <= '0';
@@ -120,14 +131,14 @@ process(instr)
                        mem_to_reg <= '0';
                        reg_write <= '1';             
        when "111" => --JUMP
-                       reg_dst <= 'X';
-                       ext_op <= 'X'; -- DECE
-                       alu_src <= 'X';
-                       branch <= 'X';
+                       reg_dst <= '0';
+                       ext_op <= '0'; 
+                       alu_src <= '0';
+                       branch <= '0';
                        jump <= '1';
                        alu_op <= "111";
                        mem_write <= '0';
-                       mem_to_reg <= 'X';
+                       mem_to_reg <= '0';
                        reg_write <= '0';     
         end case;        
     end process;

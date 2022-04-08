@@ -38,7 +38,7 @@ entity MEM is
            mem_write : in STD_LOGIC;
            alu_res : in STD_LOGIC_VECTOR (15 downto 0);
            write_data : in STD_LOGIC_VECTOR (15 downto 0);
-           alu_res_out : out STD_LOGIC_VECTOR (15 downto 0);
+           
            mem_data : out STD_LOGIC_VECTOR (15 downto 0));
 end MEM;
 
@@ -54,11 +54,11 @@ signal ram : ram_type :=(
                             X"0006",
                             X"0007",
                             X"0008",
-                            
+                            x"0009",
+                            x"000A",
                             others =>X"0000"
                             );
 begin
-alu_res_out <= alu_res;
     process(clk)
     begin
     if rising_edge(clk) then

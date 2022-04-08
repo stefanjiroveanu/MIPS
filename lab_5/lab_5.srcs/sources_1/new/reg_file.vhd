@@ -6,6 +6,7 @@ use ieee.std_logic_unsigned.all;
 entity reg_file is
 port (
     clk : in std_logic;
+    en : in std_logic;
     ra1 : in std_logic_vector (2 downto 0);
     ra2 : in std_logic_vector (2 downto 0);
     wa : in std_logic_vector (2 downto 0);
@@ -20,14 +21,7 @@ architecture Behavioral of reg_file is
 
 type reg_array is array (0 to 255) of std_logic_vector(15 downto 0);
 signal reg_file : reg_array := (
-X"0001", -- 0
-X"0002", -- 1
-X"0003", -- 2
-X"0004", -- 3
-X"0005", -- 4
-X"0006", -- 5
-X"0007", -- 6
-X"0008", -- 7
+X"0000",
 others => X"0000");
 
 begin
@@ -35,8 +29,10 @@ begin
 process(clk)
 begin
 if rising_edge(clk) then
+    if en = '1' then
     if RegWr = '1' then
         reg_file(conv_integer(wa)) <= wd;
+    end if;
     end if;
 end if;
 end process;

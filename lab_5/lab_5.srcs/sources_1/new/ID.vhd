@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -33,6 +35,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity ID is
     Port ( clk : in STD_LOGIC;
+           en : in std_logic;
            instr : in STD_LOGIC_VECTOR (15 downto 0);
            wd : in STD_LOGIC_VECTOR (15 downto 0);
            regdst : in STD_LOGIC;
@@ -46,34 +49,33 @@ entity ID is
 end ID;
 
 architecture Behavioral of ID is
-        component reg_file is
-        port (
-            clk : in std_logic;
-            ra1 : in std_logic_vector (2 downto 0);
-            ra2 : in std_logic_vector (2 downto 0);
-            wa : in std_logic_vector (2 downto 0);
-            wd : in std_logic_vector (15 downto 0);
-            RegWr : in std_logic;
-            rd1 : out std_logic_vector (15 downto 0);
-            rd2 : out std_logic_vector (15 downto 0)
-        );
-        end component;
+        
 signal read_address1 :std_logic_vector(2 downto 0);
 signal read_address2 :std_logic_vector(2 downto 0);
 signal write_address :std_logic_vector(2 downto 0);
 signal ext_imm_out :std_logic_vector(15 downto 0);
+type reg_array is array (0 to 255) of std_logic_vector(15 downto 0);
+signal reg_file : reg_array := (
+X"0000",
+others => X"0000");
+
 begin
-RF: reg_file port map ( clk => clk,
-                        ra1 => read_address1,
-                        ra2 => read_address2,
-                        wa => write_address,
-                        wd => WD,
-                        RegWr => RegWrite,
-                        rd1 => rd1,
-                        rd2 => rd2
-                        );
-                        
- mux : process(regdst)
+
+process(clk)
+begin
+if rising_edge(clk) then
+    if en = '1' then
+    if regwrite = '1' then
+        reg_file(conv_integer(write_address)) <= wd;
+    end if;
+    end if;
+end if;
+end process;
+
+rd1 <= reg_file(conv_integer(read_address1));
+rd2 <= reg_file(conv_integer(read_address2));
+
+ mux : process(regdst, instr)
  begin
  case regdst is 
      when '0' => write_address <= instr(9 downto 7);
@@ -86,7 +88,7 @@ RF: reg_file port map ( clk => clk,
  ext_process : process(instr, ext_op)
  begin
  case ext_op is
- when '0' => ext_imm_out <= "000000000" & Instr(6 downto 0);
+ when '0' => ext_imm_out <= "000000000" & instr(6 downto 0);
  when others => 
     case (instr(6)) is
              when '0' => ext_imm_out <= "000000000" & instr(6 downto 0);
